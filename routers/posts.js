@@ -43,4 +43,29 @@ const posts = [
   },
 ];
 
+const express = require('express')
+const router = express.Router()
+
+router.get('/:id', (req, res) => {
+    const postId = req.params.id
+    res.send(`Return post ${postId}`);
+})
+
+router.post('/', (req, res) => {
+    res.send(`Store a new post`);
+})
+
+router.put('/:id', (req, res) => {
+    res.send(`Edit a post`);
+})
+
+router.patch('/:id', (req, res) => {
+    res.send(`Edit part of a post`);
+})
+
+router.delete('/:id', (req, res) => {
+    res.send(`Delete a post`);
+})
+
 module.exports = posts;
+module.exports = router;
