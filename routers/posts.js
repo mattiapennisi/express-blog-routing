@@ -1,3 +1,4 @@
+// Variables
 const posts = [
   {
     title: "Ciambellone",
@@ -43,9 +44,13 @@ const posts = [
   },
 ];
 
+// Variable to import Express
 const express = require('express')
+
+// Variable for express routes
 const router = express.Router()
 
+// Routes
 router.get('/index', (req, res) => {
   res.json(posts);
 })
@@ -71,5 +76,8 @@ router.delete('/:id', (req, res) => {
     res.send(`Delete a post`);
 })
 
+// It exports all posts objects
 module.exports = posts;
+
+// It exports all routes
 module.exports = router;
