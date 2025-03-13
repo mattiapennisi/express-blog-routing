@@ -46,9 +46,8 @@ const posts = [
 const express = require('express')
 const router = express.Router()
 
-router.get('/:id', (req, res) => {
-    const postId = req.params.id
-    res.send(`Return post ${postId}`);
+router.get('/index', (req, res) => {
+  res.json(posts);
 })
 
 router.post('/', (req, res) => {

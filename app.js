@@ -11,5 +11,5 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('Server index')
+    res.send('Posts index')
 })
