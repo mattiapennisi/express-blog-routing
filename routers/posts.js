@@ -50,6 +50,11 @@ router.get('/index', (req, res) => {
   res.json(posts);
 })
 
+router.get('/show/:id', (req, res) => {
+  const postId = req.params.id - 1
+  res.json(posts[postId]);
+})
+
 router.post('/', (req, res) => {
     res.send(`Store a new post`);
 })
